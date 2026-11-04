@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vasopressor Selection in Shock — Aminergic Agent Algorithm</title>
+<meta name="description" content="An interactive, referenced walkthrough of the decision-making algorithm for selecting vasopressor (aminergic) agents by shock type — septic/vasodilatory, cardiogenic, haemorrhagic/hypovolaemic, and obstructive — from first-line norepinephrine through the MAP-target reassessment to second-line and rescue agents in refractory shock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=1">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Vasopressor (Aminergic) Agent Selection in Shock States</h1>
+  <p class="masthead__byline">
+    <strong>Dr. Özgür Karcıoğlu</strong> &amp; <strong>Dr. Satuk Buğra Han Bozatlı</strong>
+    &nbsp;— select any box below to read the reasoning and sources behind that step.
+  </p>
+  <p class="masthead__disclaimer">
+    Educational / academic reference tool, not a substitute for institutional protocol or
+    clinical judgement at the bedside. Drug doses shown reflect the algorithm as authored;
+    verify against current local protocol before clinical use.
+  </p>
+</header>
+
+<main>
+  <div class="workstation">
+    <section class="scope" aria-label="Interactive flowchart">
+      <p class="scope__hint">Scroll sideways and pinch to zoom — this is the full diagram, same as on desktop.</p>
+      <div class="flow" id="flow">
+        <svg class="edges" id="edges" aria-hidden="true"></svg>
+        <!-- nodes are rendered here by app.js from content.js -->
+      </div>
+    </section>
+
+    <aside class="readout" id="readout" aria-live="polite">
+      <button class="readout__close" id="readoutClose" type="button">Close ✕</button>
+      <div class="readout__idle" id="readoutIdle">
+        Select any box in the diagram to see what it means, why the algorithm
+        calls for it, and the sources behind it.
+      </div>
+      <div id="readoutContent" hidden></div>
+    </aside>
+  </div>
+
+  <div class="scope-backdrop" id="backdrop"></div>
+
+  <section class="references" aria-label="References">
+    <details id="references">
+      <summary>References <span class="count" id="refCount"></span></summary>
+      <ol id="referencesList"></ol>
+    </details>
+  </section>
+
+  <p class="abbrev-note">
+    HRS, hepatorenal syndrome; MAP, mean arterial pressure; MCS, mechanical
+    circulatory support.
+  </p>
+</main>
+
+<footer class="site">
+  <a href="https://satbuhan.github.io/clinical-algorithm-atlas/" target="_blank" rel="noopener">← Clinical Algorithm Atlas</a>
+  <span>Built as a companion to the other protocols, same methodology.</span>
+  <a href="https://satbuhan.github.io/aortic-dissection-protocol/" target="_blank" rel="noopener">Acute aortic dissection protocol →</a>
+  <a href="https://satbuhan.github.io/agitation-delirium-protocol/" target="_blank" rel="noopener">Butyrophenone selection — agitation &amp; delirium →</a>
+  <a href="https://satbuhan.github.io/influenza-antiviral-protocol/" target="_blank" rel="noopener">Influenza antiviral selection →</a>
+  <a href="https://satbuhan.github.io/nsaid-pain-protocol/" target="_blank" rel="noopener">Dexketoprofen vs ibuprofen →</a>
+  <a href="https://satbuhan.github.io/anticoagulant-reversal-protocol/" target="_blank" rel="noopener">Anticoagulant reversal in GI haemorrhage →</a>
+  <a href="https://satbuhan.github.io/obesity-critical-care-protocol/" target="_blank" rel="noopener">The adult with obesity in emergency &amp; critical care →</a>
+  <a href="https://satbuhan.github.io/dapagliflozin-overdose-protocol/" target="_blank" rel="noopener">Dapagliflozin / SGLT2 inhibitor overdose →</a>
+  <a href="https://satbuhan.github.io/lidocaine-prilocaine-protocol/" target="_blank" rel="noopener">Lidocaine vs prilocaine for laceration repair →</a>
+  <a href="https://satbuhan.github.io/pte-thrombolysis-protocol/" target="_blank" rel="noopener">Reperfusion therapy for acute pulmonary thromboembolism →</a>
+  <a href="https://satbuhan.github.io/lmwh-nste-acs-protocol/" target="_blank" rel="noopener">LMWH selection &amp; renal dosing in NSTE-ACS →</a>
+  <a href="https://satbuhan.github.io/ketamine-head-injury-protocol/" target="_blank" rel="noopener">Ketamine in head injury — safety &amp; complication management →</a>
+  <a href="https://satbuhan.github.io/midazolam-clonazepam-protocol/" target="_blank" rel="noopener">Midazolam vs clonazepam — seizures, agitation &amp; anxiety →</a>
+  <a href="https://github.com/satbuhan" target="_blank" rel="noopener">github.com/satbuhan</a>
+  <span>CC BY-NC-SA 4.0</span>
+</footer>
+
+<script src="assets/content.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

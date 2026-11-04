@@ -1,0 +1,169 @@
+# Vasopressor (Aminergic) Agent Selection in Shock States — Interactive Decision Algorithm
+
+An interactive, referenced walkthrough of the decision-making algorithm for
+selecting a vasopressor (aminergic) agent across the four shock types —
+septic/vasodilatory, cardiogenic, haemorrhagic/hypovolaemic, and
+obstructive — from the initial SHOCK? gate through first-line
+norepinephrine, the MAP ≥ 65 mmHg reassessment, second-line agents, and
+rescue therapy for refractory shock. Every box and decision point in the
+diagram can be selected to reveal, in one place: what the step means, why
+the algorithm calls for it, and the sources behind it.
+
+**Live site:** https://satbuhan.github.io/vasopressor-shock-protocol/
+
+**Authors:** Dr. Özgür Karcıoğlu & Dr. Satuk Buğra Han Bozatlı
+
+This tool is part of a growing atlas of tools built the same way:
+
+- [Clinical Algorithm Atlas](https://satbuhan.github.io/clinical-algorithm-atlas/) — the hub page for all of them
+- [Reperfusion therapy in acute pulmonary thromboembolism](https://github.com/satbuhan/pte-thrombolysis-protocol) ([live site](https://satbuhan.github.io/pte-thrombolysis-protocol/))
+- [Acute aortic dissection — initial medical management](https://github.com/satbuhan/aortic-dissection-protocol) ([live site](https://satbuhan.github.io/aortic-dissection-protocol/))
+- [Butyrophenone selection — acute agitation & hyperactive delirium](https://github.com/satbuhan/agitation-delirium-protocol) ([live site](https://satbuhan.github.io/agitation-delirium-protocol/))
+- [Influenza antiviral selection — baloxavir marboxil vs oseltamivir](https://github.com/satbuhan/influenza-antiviral-protocol) ([live site](https://satbuhan.github.io/influenza-antiviral-protocol/))
+- [Dexketoprofen vs ibuprofen — selecting an NSAID for acute pain](https://github.com/satbuhan/nsaid-pain-protocol) ([live site](https://satbuhan.github.io/nsaid-pain-protocol/))
+- [Anticoagulant reversal in gastrointestinal haemorrhage](https://github.com/satbuhan/anticoagulant-reversal-protocol) ([live site](https://satbuhan.github.io/anticoagulant-reversal-protocol/))
+- [The adult with obesity in emergency and critical care](https://github.com/satbuhan/obesity-critical-care-protocol) ([live site](https://satbuhan.github.io/obesity-critical-care-protocol/))
+- [Dapagliflozin / SGLT2 inhibitor — overdose and acute illness management](https://github.com/satbuhan/dapagliflozin-overdose-protocol) ([live site](https://satbuhan.github.io/dapagliflozin-overdose-protocol/))
+- [Lidocaine vs prilocaine — local anaesthesia for laceration repair](https://github.com/satbuhan/lidocaine-prilocaine-protocol) ([live site](https://satbuhan.github.io/lidocaine-prilocaine-protocol/))
+- [LMWH selection & renal dosing in unstable angina / NSTEMI](https://github.com/satbuhan/lmwh-nste-acs-protocol) ([live site](https://satbuhan.github.io/lmwh-nste-acs-protocol/))
+- [Ketamine in head injury — safety analysis & complication management](https://github.com/satbuhan/ketamine-head-injury-protocol) ([live site](https://satbuhan.github.io/ketamine-head-injury-protocol/))
+- [Midazolam versus clonazepam — seizures, acute agitation & anxiety](https://github.com/satbuhan/midazolam-clonazepam-protocol) ([live site](https://satbuhan.github.io/midazolam-clonazepam-protocol/))
+
+## Why this exists
+
+A flowchart alone tells a reader *what* to do at each step but not *why*,
+and a reader outside the authors' own team cannot easily check the evidence
+behind a specific choice (why norepinephrine first-line, why a 65 mmHg
+target, when vasopressin or a rescue agent belongs). This page keeps the
+original algorithm exactly as authored, and attaches the clinical reasoning
+and literature to each box without cluttering the diagram itself.
+
+The algorithm this page presents is Figure 1 of the authors' own exemplary
+decision-making algorithm on vasopressor (aminergic) agents in shock
+states (53 references); the supplementary content on this page draws on
+that reference list, independently re-verified rather than accepted on
+trust — see "Status" below.
+
+## Status
+
+This is a working version, built to be tested on both desktop and mobile.
+Several things are worth flagging explicitly:
+
+- **Reference verification was done by an external reviewer (a separately-
+  budgeted LLM pass), then independently spot-checked here** — see
+  [`METHODOLOGY.md`](METHODOLOGY.md), "External verification". Five
+  highest-priority entries were re-checked by hand against primary sources
+  (the one confirmed fabrication, the four most substantive "corrected"
+  author-list errors, and one "verified" entry for calibration); all five
+  matched the external pass exactly, so its results were trusted for the
+  remainder — though every reference's full bibliographic text was still
+  independently reconstructed here from the DOI/PMID it confirmed, since
+  the external pass's own output did not carry full citation text.
+- **Reference 34 is confirmed fabricated.** The manuscript cited Wada,
+  Yasunaga and Inokuchi on terlipressin in catecholamine-resistant septic
+  shock; the given DOI resolves to an unrelated article, and exhaustive
+  searching (PubMed, Crossref, Google Scholar — by title, DOI, and author
+  combination) found no such paper by these authors on this topic anywhere.
+  It is not used on any flowchart node; flagged in its own `kind` field
+  (`url: null`) and should be raised with the manuscript authors rather than
+  silently dropped.
+- **16 references are corrected**, most commonly a wrong author list
+  attached to an otherwise-real paper (the title/journal/year/DOI check out,
+  but the manuscript's author line doesn't match the actual paper) or a
+  DOI that resolves to a different article than the one actually being
+  cited. The most substantive corrections:
+  - **Reference 9** — the manuscript's citation ("Vasopressors in
+    Hemorrhagic Shock") does not exist at the given DOI and no such paper
+    by this author trio could be found; the real Colling, Banton & Beilman
+    (2018) review, "Vasopressors in Sepsis", is substituted.
+  - **Reference 27** — the manuscript's DOI resolves to an unrelated
+    article, and two of the three listed co-authors were wrong.
+  - **Reference 33** — the manuscript's author list names two co-authors
+    (Englesakis, McDonald) who did not work on this study at all; title,
+    journal, year and DOI are otherwise correct.
+  - **Reference 45** — the manuscript's entire four-author list is wrong;
+    title, journal, year, DOI and the cited meta-analysis result are
+    otherwise correct.
+  - **Reference 49** — a fetched PDF initially returned a different,
+    companion paper from the same journal issue (same DOI prefix, different
+    suffix, different first author); caught on a DOI/author mismatch and
+    corrected to the paper actually cited (Hylands et al., 2017).
+- **Reference 7's exact title could not be independently re-confirmed live
+  this session** — its DOI, PMID, journal, volume and page range are all
+  confirmed via Crossref/PubMed, but the publisher page itself was not
+  reachable through the tools available this session. Flagged as pending in
+  its own `kind` field rather than presented as fully confirmed.
+- **Every other reference has been independently verified** against a
+  primary source (DOI/PMID lookup, not accepted on trust from the
+  manuscript's own list or from the external reviewer's verdict alone).
+
+The source figure carries its own stated strengths and limitations, kept
+here rather than discarded:
+
+> **Strengths:** evidence-based (norepinephrine first-line; SOAP II, VASST,
+> ATHOS-3, Surviving Sepsis Campaign 2021); structured shock-type logic; a
+> MAP target decision point; includes adjuncts and rescue agents.
+>
+> **Limitations:** simplified — excludes haemodynamic phenotyping, dose
+> titration curves, organ-specific targets, comorbidity nuances, and
+> resource-availability contexts.
+
+## Disclaimer
+
+This is an academic / educational reference tool, not a substitute for
+institutional protocol or bedside clinical judgement. Verify any dose or
+threshold against current local protocol before clinical use.
+
+## How it's built
+
+Plain HTML/CSS/JS, no build step and no framework — a single static site
+that GitHub Pages can serve directly.
+
+```
+index.html          page structure
+assets/style.css     design (the "paper" masthead/references,
+                      the diagram scope + readout panel)
+assets/content.js     ← single source of truth for every node's text,
+                      dosing, and reference list. Edit this file to change
+                      what the page says.
+assets/app.js         rendering + interaction (builds the diagram and the
+                      connector lines from content.js, handles the
+                      click-to-expand panel on desktop and the bottom
+                      sheet on mobile)
+```
+
+### Running it locally
+
+No install needed:
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+### Editing content
+
+Open `assets/content.js`. Each entry in `NODES` is one box or decision
+diamond from the algorithm (`meaning`, `rationale`, and `refs` pointing at
+numbered entries in `REFERENCES`). Add or edit a reference in `REFERENCES`
+and point to it by `id` from any node. Never change a node's `label` or
+`sub` text without the author team's sign-off — those fields are the
+algorithm itself, transcribed verbatim from Figure 1. Boxes with an
+itemized list (e.g. the category boxes' line break, or the second-line-
+agent box's drug list) carry the source box's own line breaks as literal
+`\n` — preserve those exactly; they render as separate lines, not
+flattened into comma-separated prose, because that is how the original
+boxes are drawn.
+
+### Building the next tool in this atlas
+
+See [`METHODOLOGY.md`](METHODOLOGY.md) — the full build/verification
+process (fidelity rule, content schema, citation verification, QA steps),
+written so that any collaborator or AI assistant can pick up this project
+in a fresh session and build the next tool the same way.
+
+## License
+
+Content and code are released under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) —
+share and adapt with attribution, non-commercially, under the same license.
