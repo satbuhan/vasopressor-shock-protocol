@@ -9,6 +9,11 @@
 // text is byte-for-byte as authored; meaning/rationale/refs are added
 // research, independently verified against each primary source.
 
+// Date this tool's content and citations were last built/checked
+// together (see assets/app.js's References summary, and the hub
+// README's "Content search index"-adjacent conventions doc).
+const VERIFIED = "2026-11-04";
+
 const REFERENCES = [
   { id: 1, kind: "Sepsis-3 consensus definitions; independently verified.",
     text: "Singer, M., Deutschman, C.S., Seymour, C.W. et al. (2016) 'The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)', JAMA, 315(8), pp. 801-810.",
