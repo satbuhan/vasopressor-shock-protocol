@@ -13,15 +13,20 @@ clinical-algorithm web tools, each converted from the authors' own
 hand-drawn flowcharts or manuscript figures. Existing tools:
 `aortic-dissection-protocol`, `agitation-delirium-protocol`,
 `influenza-antiviral-protocol`, `nsaid-pain-protocol`,
-`anticoagulant-reversal-protocol`, `obesity-critical-care-protocol`,
-`dapagliflozin-overdose-protocol`, `lidocaine-prilocaine-protocol`,
-`pte-thrombolysis-protocol`, `lmwh-nste-acs-protocol`,
-`ketamine-head-injury-protocol`, `midazolam-clonazepam-protocol`,
-`vasopressor-shock-protocol`, `wbct-trauma-protocol`,
-`epinephrine-revisited-protocol`, `ketamine-indications-protocol`,
-`tenecteplase-alteplase-stemi-protocol`, `cwa-blood-gas-protocol`,
-`ccb-toxicity-protocol`, `haloperidol-adjunct-protocol`,
-`succinylcholine-rocuronium-protocol`
+`anticoagulant-reversal-protocol`,
+`obesity-critical-care-protocol`,
+`dapagliflozin-overdose-protocol`,
+`lidocaine-prilocaine-protocol`, `pte-thrombolysis-protocol`,
+`lmwh-nste-acs-protocol`, `ketamine-head-injury-protocol`,
+`midazolam-clonazepam-protocol`, `wbct-trauma-protocol`,
+`epinephrine-revisited-protocol`,
+`ketamine-indications-protocol`,
+`tenecteplase-alteplase-stemi-protocol`,
+`cwa-blood-gas-protocol`, `ccb-toxicity-protocol`,
+`haloperidol-adjunct-protocol`,
+`succinylcholine-rocuronium-protocol`,
+`geriatric-pain-protocol`,
+`metoclopramide-ondansetron-protocol`
 (GitHub account: satbuhan). Hub page listing all of them:
 `clinical-algorithm-atlas`.
 
